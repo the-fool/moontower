@@ -1,0 +1,7 @@
+baseurl = "http://moontowercider.com/"
+languageCode = "en-us"
+title = "Moontower Cider | Crafted in East Austin Texas"
+
+[params]
+    subtitle = "Wat"
+    author = "Thomas Ruble"
