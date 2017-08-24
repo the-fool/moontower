@@ -1,3 +1,38 @@
+html,
 body {
-  background: blue;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background: #eaece7;
+    font-family: adobe-garamond-pro, Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+    font-weight: 400;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex: 1;
+    max-width: 580px;
+}
+
+nav span[role="menuitem"] a {
+    line-height: 2.3;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    border-bottom: 2px solid transparent;
 }

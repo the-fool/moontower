@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/main.css">
-    <title>{{ block "title" . }}
-      {{ .Site.Title }}
-    {{ end }}</title>
+    <title>{{ block "title" . }} {{ .Site.Title }} {{ end }}</title>
   </head>
+
   <body>
-    <!-- Code that all your templates share, like a header -->
+    <header>
+      <nav role="navigation">
+        <span role="menuitem">
+          <a href="/ciders/">CIDERS</a>
+        </span>
+        <span role="menuitem">
+          <a href="/about/">ABOUT</a>
+        </span>
+        <span role="menuitem">
+          <a href="/">
+            {{ partial "nav_logo.html" }}
+          </a>
+        </span>
+        <span role="menuitem">
+          <a href="/faq/">FAQ</a>
+        </span>
+        <span role="menuitem">
+          <a href="/contact/">CONTACT</a>
+        </span>
+      </nav>
+    </header>
     {{ block "main" . }}
-      <!-- The part of the page that begins to differ between templates -->
+    <!-- The part of the page that begins to differ between templates -->
     {{ end }}
   </body>
+
 </html>
