@@ -1,14 +1,21 @@
 {{ define "main" }}
-    <main aria-role="main">
-      <header class="homepage-header">
-        <h1>{{.Title}}</h1>
-        {{ with .Params.subtitle }}
-        <span class="subtitle">{{.}}</span>
-        {{ end }}
-      </header>
-      <div class="homepage-content">
-        <!-- Note that the content for index.html, as a sort of list page, will pull from content/_index.md -->
-        {{.Content}}
-      </div>
-    </main>
+<main aria-role="main">
+  <div id="homepage">
+
+    <!-- Top logo -->
+    <div id="home-logo">
+      {{ partial "svgs/home_logo.html" }}
+    </div>
+
+    <!-- The boxy svg -->
+    <div class="sub-splash" id="sub-splash-sm-md">
+      {{ partial "svgs/sub_splash_sm_md.html" }}
+    </div>
+    <div class="sub-splash" id="sub-splash-lg">
+    </div>
+
+    <!-- See More button -->
+    <a href="/ciders" id="see-more" class="button" title="Ciders">See More</a>
+  </div>
+</main>
 {{ end }}
