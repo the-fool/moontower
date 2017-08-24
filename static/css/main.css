@@ -1,3 +1,13 @@
+@font-face {
+    font-family: "Gothic Bold Extended";
+    src: url("/fonts/gothic_bold_extended.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: "Gothic Bold";
+    src: url("/fonts/gothic_bold.woff2") format('woff2');
+}
+
 html,
 body {
     width: 100%;
@@ -28,11 +38,17 @@ nav {
     justify-content: space-around;
     flex: 1;
     max-width: 580px;
+    font-family: "Gothic Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
-nav span[role="menuitem"] a {
+nav a[role="menuitem"] {
     line-height: 2.3;
     text-transform: uppercase;
     letter-spacing: .12em;
     border-bottom: 2px solid transparent;
+    font-size: 1rem;
+    color: #10454b;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 1em;
 }

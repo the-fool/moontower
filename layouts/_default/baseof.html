@@ -3,6 +3,7 @@
 
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/main.css">
     <title>{{ block "title" . }} {{ .Site.Title }} {{ end }}</title>
   </head>
@@ -10,23 +11,13 @@
   <body>
     <header>
       <nav role="navigation">
-        <span role="menuitem">
-          <a href="/ciders/">CIDERS</a>
-        </span>
-        <span role="menuitem">
-          <a href="/about/">ABOUT</a>
-        </span>
-        <span role="menuitem">
-          <a href="/">
-            {{ partial "nav_logo.html" }}
-          </a>
-        </span>
-        <span role="menuitem">
-          <a href="/faq/">FAQ</a>
-        </span>
-        <span role="menuitem">
-          <a href="/contact/">CONTACT</a>
-        </span>
+        <a href="/ciders/" role="menuitem">CIDERS</a>
+        <a href="/about/" role="menuitem">ABOUT</a>
+        <a href="/" role="menuitem">
+          {{ partial "nav_logo.html" }}
+        </a>
+        <a href="/faq/" role="menuitem">FAQ</a>
+        <a href="/contact/" role="menuitem">CONTACT</a>
       </nav>
     </header>
     {{ block "main" . }}
