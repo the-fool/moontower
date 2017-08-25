@@ -158,6 +158,10 @@ nav a {
     display: flex;
   }
 
+  #mobile-nav {
+    display: none!important;
+  }
+
   #mobile-topper {
     display: none;
   }
