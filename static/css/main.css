@@ -193,6 +193,38 @@ nav a {
     padding: 1.2rem;
   }
 }
+
+@media screen and (min-width: 910px) {
+  #homepage {
+    padding-top: 9%;
+  }
+
+  #see-more {
+    display: none;
+  }
+
+  .sub-splash {
+    margin-top: 60px;
+  }
+  #sub-splash-sm-md {
+    display: none;
+  }
+
+  #sub-splash-lg {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1130px) {
+  #homepage {
+    padding-top: 8%;
+  }
+
+  #home-logo {
+    max-width: 50%;
+  }
+}
+
 .hamburger {
   padding: 15px 0;
 }
