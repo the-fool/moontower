@@ -31,21 +31,34 @@ header {
   width: 100%;
 }
 
-#collapsed-nav {
+#mobile-topper {
   padding-top: 20px;
 }
 
-#collapsed-nav a {
+#mobile-topper a {
   position: absolute;
   left: 50%;
   margin-left: -70px;
 }
-#collapsed-nav a svg{
+#mobile-topper a svg{
   height: 42px;
   width: 140px;
 }
 
-nav {
+#mobile-nav {
+  display: none;
+  background-color: #10454b;
+  padding: 5rem 0;
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+#mobile-nav.open {
+  display: block;
+}
+
+#big-nav {
   display: none;
   flex-direction: row;
   justify-content: space-around;
@@ -55,7 +68,7 @@ nav {
   font-family: "Gothic Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
-nav a[role="menuitem"] {
+#big-nav a[role="menuitem"] {
   line-height: 2.3;
   text-transform: uppercase;
   letter-spacing: .12em;
@@ -68,7 +81,7 @@ nav a[role="menuitem"] {
   margin: 0.8em;
 }
 
-nav a:hover:not(#nav-logo) {
+#big-nav a:hover:not(#nav-logo) {
   border-bottom: 2px solid #10454b;
 }
 
@@ -120,11 +133,11 @@ nav a:hover:not(#nav-logo) {
 
 
 @media screen and (min-width: 640px) {
-  nav {
+  #big-nav {
     display: flex;
   }
 
-  #collapsed-nav {
+  #mobile-topper {
     display: none;
   }
 

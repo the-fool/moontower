@@ -11,7 +11,7 @@
 
   <body>
     <header>
-      <div id="collapsed-nav">
+      <div id="mobile-topper">
         <button onclick="openNav()" id="nav-button" class="hamburger hamburger--boring" type="button">
           <span class="hamburger-box">
             <span class="hamburger-inner"></span>
@@ -21,7 +21,26 @@
           {{ partial "nav_logo.html" }}
         </a>
       </div>
-      <nav role="navigation">
+      <nav id="mobile-nav" role="navigation">
+        <ul role="menu">
+          <li role="menuitem">
+            <a href="/">HOME</a>
+          </li>
+          <li role="menuitem">
+            <a href="/ciders">CIDERS</a>
+          </li>
+          <li role="menuitem">
+            <a href="/about">ABOUT</a>
+          </li>
+          <li role="menuitem">
+            <a href="/faq">FAQ</a>
+          </li>
+          <li role="menuitem">
+            <a href="/contact">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+      <nav id="big-nav" role="navigation">
         <a href="/ciders/" role="menuitem">CIDERS</a>
         <a href="/about/" role="menuitem">ABOUT</a>
         <a href="/" role="menuitem" id="nav-logo">
@@ -38,8 +57,9 @@
     <script>
      function openNav() {
        var button = document.getElementById('nav-button');
+       var mobileNav = document.getElementById('mobile-nav');
        button.classList.toggle('is-active');
-
+       mobileNav.classList.toggle('open');
      }
     </script>
   </body>
