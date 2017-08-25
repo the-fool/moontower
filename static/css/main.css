@@ -8,14 +8,18 @@
   src: url("/fonts/gothic_bold.woff2") format('woff2');
 }
 
+html {
+  width: 100%;
+}
+
 html,
 body {
-  width: 100%;
   height: 100%;
 }
 
 body {
-  margin: 0;
+  width: 90%;
+  margin: auto;
   background: #eaece7;
   font-family: adobe-garamond-pro, Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
   font-weight: 400;
@@ -27,8 +31,22 @@ header {
   width: 100%;
 }
 
+#collapsed-nav {
+  padding-top: 20px;
+}
+
+#collapsed-nav a {
+  position: absolute;
+  left: 50%;
+  margin-left: -70px;
+}
+#collapsed-nav a svg{
+  height: 42px;
+  width: 140px;
+}
+
 nav {
-  display: flex;
+  display: none;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
@@ -52,11 +70,6 @@ nav a[role="menuitem"] {
 
 nav a:hover:not(#nav-logo) {
   border-bottom: 2px solid #10454b;
-}
-
-main {
-  width: 90%;
-  margin: auto;
 }
 
 #homepage {
@@ -107,6 +120,14 @@ main {
 
 
 @media screen and (min-width: 640px) {
+  nav {
+    display: flex;
+  }
+
+  #collapsed-nav {
+    display: none;
+  }
+
   #homepage {
     background-image: url('/images/home-bg-1280x600.jpg');
     padding: 15% 8% 50px;
@@ -133,4 +154,16 @@ main {
     font-size: .705rem;
     padding: 1.2rem;
   }
+}
+.hamburger {
+  padding: 15px 0;
+}
+.hamburger:focus {
+  outline: 0;
+}
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  background-color: #10454b;
+  border-radius: 0px;
 }

@@ -4,12 +4,23 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/_hamburger.css">
     <link rel="stylesheet" href="/css/main.css">
     <title>{{ block "title" . }} {{ .Site.Title }} {{ end }}</title>
   </head>
 
   <body>
     <header>
+      <div id="collapsed-nav">
+        <button class="hamburger hamburger--boring" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+        <a href="/" rel="home">
+          {{ partial "nav_logo.html" }}
+        </a>
+      </div>
       <nav role="navigation">
         <a href="/ciders/" role="menuitem">CIDERS</a>
         <a href="/about/" role="menuitem">ABOUT</a>
