@@ -1,29 +1,33 @@
 body {
 }
-header {
+article header {
   font-family: "Gothic Bold",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
   letter-spacing: .12em;
   line-height: 2.6em;
-  margin-bottom: 2em;
   font-size: 2em;
   text-transform: uppercase;
 }
 article {
   color: white;
   line-height: 1.25;
+  margin: 0 0 24px;
 }
 
 section {
-  padding: 8%;
+  padding: 2% 8%;
 }
 
 p {
   max-width: 90%;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 #about-us {
   background-color: #ee5956;
+}
+
+#about-cider {
+  background-color: #73c38f;
 }
 
 
