@@ -1,5 +1,8 @@
 {{ define "styles" }}
-<link rel="stylesheet" href="/css/about.css"> {{ end }} {{ define "main" }}
+<link rel="stylesheet" href="/css/about.css">
+{{ end }}
+
+{{ define "main" }}
 <main aria-role="main">
   <article>
 
@@ -7,22 +10,8 @@
     <section id="about-us">
       <header>About Us</header>
       <div class="body">
-        <!--  Main text content -->
         <div class="col">
-          <p>
-            Following in the spirit of the upstart tradition, we approach cidermaking with a belief that experimentation can lead to new and delightful discoveries. Armed with the insight that comes with nearly a decade of fermentation experience, and with a laboratory rigor, we are committed to turning quality ingredients that are readily available into beautiful inventions. We respect the inherited traditions of long-established cidermaking techniques without being weighed down by convention, and we embrace a spirit of exploration without being carried away by fads.
-          </p>
-          <blockquote>
-            <span class="quote-inner">
-              We respect the inherited traditions of long-established cidermaking techniques without being weighed down by convention
-            </span>
-          </blockquote>
-          <p>
-            We believe the guiding principle to good quality cidermaking is an instinct for balance. We use a blend of bittersweet cider apples that provide a depth of flavor and complexity found in the best European ciders, as well as the fruit grown and readily available in the apple-growing regions of America.
-          </p>
-          <p>
-            We believe that well-balanced cider goes beyond being dry or sweet. There’s a reason that cider long held a role as America’s drink of choice, and we want to help reassert its rightful place by making a well-balanced, accessible drink for anyone to enjoy.
-          </p>
+          {{ partial "about/about_us.html" }}
         </div>
 
         <!-- The moontower picture -->
@@ -30,43 +19,12 @@
           <img src="/images/moontower_at_dusk.jpg">
         </div>
       </div>
-
-
     </section>
+
     <section class="fact-box" id="the-facts-md">
-      <div class="box">
-        <div class="box-heading">
-          EST.
-        </div>
-        <div class="box-body">
-          2016
-        </div>
-      </div>
-      <div class="box" style="flex: 1">
-        <div class="box-heading">
-          HEAD CIDERMAKER
-        </div>
-        <div class="box-body">
-          Benjamin Weaver
-        </div>
-      </div>
-      <div class="box" style="flex: 1">
-        <div class="box-heading">
-          made in:
-        </div>
-        <div class="box-body">
-          Austin, Texas
-        </div>
-      </div>
-      <div class="box lg-only" style="flex: 1">
-        <div class="box-heading">
-          Made for:
-        </div>
-        <div class="box-body">
-          All y'all (everybody)
-        </div>
-      </div>
+      {{ partial "about/fact_box.html" }}
     </section>
+
     <section id="about-cider">
       <div class="body">
         <div class="history" id="history-justified">
@@ -77,12 +35,7 @@
         </div>
         <div id="about-cider-text">
           <header>About Cider</header>
-          <p>
-            Cider is in a moment of rebirth today. Far from being a novelty drink, its origins go back as long as apples have been falling off trees and fermenting on the ground. Not long ago, in the era before Prohibition, cider was seen as America’s drink of choice. It was a drink whose availability wasn’t limited by proximity to barley fields or vineyards, and was a safe, nourishing alternative to contaminated water before widespread clean drinking water. It followed the expansion out west, and was even commonly used to lure the best labor to farms that needed help with their fields.
-          </p>
-          <p>
-            Largely forgotten since Prohibition, we are now in a period of rediscovery with a drink that shares the best qualities of its more popular cousins. It offers the complex aromas of fine wine, the approachability of crisp beer, and a refreshing quenchability for those hot Texas nights.
-          </p>
+          {{ partial "about/about_cider.html" }}
         </div>
       </div>
     </section>
