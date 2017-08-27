@@ -186,6 +186,11 @@ nav a {
   }
 }
 
+@media screen and (max-width: 909px) {
+  .lg-only {
+    display: none;
+  }
+}
 @media screen and (min-width: 910px) {
   #homepage {
     padding-top: 9%;
