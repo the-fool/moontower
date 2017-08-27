@@ -4,6 +4,11 @@
 
 {{ define "main" }}
 <main aria-role="main">
-  {{ partial "faq/faq_body.html" }}
+  <article>
+    <header><h1>Frequently Asked Questions</h1></header>
+    <div class="body">
+      {{ partial "faq/faq_body.html" }}
+    </div>
+  </article>
 </main>
 {{ end }}

@@ -4,6 +4,10 @@
 }
 
 @font-face {
+  font-family: "Gothic Bold Condensed";
+  src: url("/fonts/gothic_bold_condensed.woff2") format('woff2');
+}
+@font-face {
   font-family: "Gothic Bold";
   src: url("/fonts/gothic_bold.woff2") format('woff2');
 }
@@ -12,6 +16,23 @@ html {
   width: 100%;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-style: normal;
+  font-weight: 400;
+  color: inherit;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  font-family: "Gothic Bold";
+  line-height: 1.75rem;
+  letter-spacing: .12em;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+article {
+  line-height: 1.25;
+}
 html,
 body {
   height: 100%;
