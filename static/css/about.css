@@ -1,12 +1,13 @@
-body {
-}
+body {}
+
 article header {
-  font-family: "Gothic Bold",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  font-family: "Gothic Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   letter-spacing: .12em;
   line-height: 2.6em;
   font-size: 2em;
   text-transform: uppercase;
 }
+
 article {
   color: white;
   line-height: 1.25;
@@ -15,6 +16,7 @@ article {
 
 section {
   padding: 2% 8%;
+  margin-bottom: 24px;
 }
 
 p {
@@ -29,7 +31,6 @@ p {
 #about-cider {
   background-color: #73c38f;
 }
-
 
 blockquote {
   display: flex;
@@ -59,3 +60,38 @@ blockquote .quote-inner {
   letter-spacing: 2px;
 }
 
+.fact-box {
+  display: none;
+  color: #ee5956;
+}
+
+.fact-box .box {
+  border: 2px solid;
+  padding: 1em;
+}
+
+.fact-box .box .box-heading {
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 3px;
+  font-weight: 300;
+}
+
+.fact-box .box .box-body {
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-family: sans-serif;
+  letter-spacing: 3px;
+  font-size: 17px;
+  margin-top: 2px;
+}
+
+.fact-box .box:not(:last-child) {
+  border-right: 0px;
+}
+
+@media screen and (min-width: 640px) {
+  .fact-box {
+    display: flex;
+  }
+}
