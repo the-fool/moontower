@@ -49,6 +49,17 @@ p {
 
 #about-cider {
   background-color: #73c38f;
+  padding-left: 0!important;
+}
+
+#about-cider-text {
+  margin-left: 8%;
+}
+
+.history {
+  display: none;
+  flex: 0;
+  padding-top: 30px;
 }
 
 blockquote {
@@ -113,5 +124,27 @@ blockquote .quote-inner {
   .fact-box {
     display: flex;
   }
+}
 
+@media screen and (min-width: 910px) {
+  #history-justified {
+    display: block;
+    flex: 1;
+  }
+
+  #about-cider-text {
+    margin-left: 4%;
+  }
+}
+
+@media screen and (min-width: 1130px) {
+  #history-justified {
+    display: none;
+    flex: 0;
+  }
+
+  #history-staggered {
+    display: block;
+    flex: 1;
+  }
 }
