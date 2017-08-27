@@ -19,6 +19,25 @@ section {
   margin-bottom: 24px;
 }
 
+section .body {
+  display: flex;
+  flex-direction: row;
+}
+
+section .body .col {
+  flex: 1;
+}
+
+#tower-picture {
+  margin-left: 3em;
+  text-align: right;
+}
+
+#tower-picture img {
+  width: 100%;
+  max-width: 450px;
+}
+
 p {
   max-width: 90%;
   font-size: 1em;
