@@ -6,6 +6,7 @@ header {
   text-transform: uppercase;
   color: white;
 }
+
 .block {
   break-inside: avoid;
 }
@@ -19,18 +20,14 @@ h2 {
   letter-spacing: 0.055em;
 }
 
-p {
-  margin-top: 0;
-  color: #f3f3f3;
-}
-
 article {
   background-color: #df9c3a;
   padding: 5% 8% 2%;
 }
 
-article .body {
-  color: white;
+article .body p {
+  margin-top: 0;
+  font-size: 1rem;
 }
 
 #faq-footer {
@@ -39,7 +36,7 @@ article .body {
   margin-bottom: 24px;
 }
 
-#faq-footer > * {
+#faq-footer>* {
   padding: 5px 10px;
   text-transform: uppercase;
 }
@@ -51,7 +48,7 @@ article .body {
   border: 2px solid #df9c3a;
 }
 
-#faq-footer > a {
+#faq-footer>a {
   background-color: #df9c3a;
   color: #eaece7;
   text-decoration: none;
@@ -61,7 +58,7 @@ article .body {
   cursor: pointer;
 }
 
-#faq-footer > a:hover {
+#faq-footer>a:hover {
   background-color: #df9c5a;
 }
 
@@ -70,5 +67,13 @@ article .body {
     -moz-column-count: 2;
     -webkit-column-count: 2;
     column-count: 2;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  article .body p {
+    font-size: 1.2rem;
+    line-height: 1.25;
+    margin-bottom: 1.5rem;
   }
 }
