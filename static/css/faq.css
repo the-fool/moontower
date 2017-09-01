@@ -33,6 +33,38 @@ article .body {
   color: white;
 }
 
+#faq-footer {
+  float: right;
+  display: flex;
+  margin-bottom: 24px;
+}
+
+#faq-footer > * {
+  padding: 5px 10px;
+  text-transform: uppercase;
+}
+
+#faq-footer-text {
+  font-family: 'Gothic Bold';
+  color: #df9c3a;
+  letter-spacing: .05rem;
+  border: 2px solid #df9c3a;
+}
+
+#faq-footer > a {
+  background-color: #df9c3a;
+  color: #eaece7;
+  text-decoration: none;
+  font-size: 12px;
+  font-family: 'Gothic Bold Extended';
+  padding-top: 9px;
+  cursor: pointer;
+}
+
+#faq-footer > a:hover {
+  background-color: #df9c5a;
+}
+
 @media screen and (min-width: 1138px) {
   article .body {
     -moz-column-count: 2;
