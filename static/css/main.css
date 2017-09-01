@@ -117,14 +117,22 @@ nav a {
 #big-nav a[role="menuitem"] {
   line-height: 2.3;
   border-bottom: 2px solid transparent;
-  transition: border-bottom .5s;
+  transition: border-bottom .3s;
   font-size: 1rem;
   color: #10454b;
   margin: 0.8em;
 }
 
-#big-nav a:hover:not(#nav-logo) {
+#big-nav a.underlined,
+#big-nav a:hover
+{
   border-bottom: 2px solid #10454b;
+}
+#nav-logo {
+  border-bottom-color: transparent!important;
+}
+#big-nav a.underlined:hover {
+  border-bottom-color: transparent;
 }
 
 #homepage {

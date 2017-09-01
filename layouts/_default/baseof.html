@@ -40,7 +40,7 @@
           {{ partial "nav_logo.html" }}
         </a>
         <a href="/faq/" role="menuitem" {{ if eq .Section "faq" }} class="underlined" {{ end }}>FAQ</a>
-        <a href="/contact/" role="menuitem" {{ if eq .Section "faq" }} class="underlined" {{ end }}>CONTACT</a>
+        <a href="/contact/" role="menuitem" {{ if eq .Section "contact" }} class="underlined" {{ end }}>CONTACT</a>
       </nav>
     </header>
     {{ block "main" . }}
