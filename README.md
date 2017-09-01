@@ -16,7 +16,7 @@ git clone https:github.com/the-fool/moontower
 ```
 
 
-## Make changes from now until forever
+## Make changes and save changes
 You only need to `clone` **once**.  From that point forward, when you want to update your code, you go to the root directory of the project and:
 ```bash
 # 'pulls' in the most recent code and brings your own local copy up to date
