@@ -13,6 +13,9 @@ Get [hugo](https://gohugo.io/getting-started/installing/).
 In a shell, `cd` to a place where you want the code to be.  Then:
 ```bash
 git clone https:github.com/the-fool/moontower
+
+# now get inside the code directory!
+cd moontower
 ```
 
 
