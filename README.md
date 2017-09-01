@@ -4,7 +4,7 @@ The code was made with Hugo v0.26 -- make sure you're up to date.
 
 Get [hugo](https://gohugo.io/getting-started/installing/).
 
-(Hugo is a program that assembles a finished website from a kit we give it.  It's easier for us to make a kit with instructions rather than do all the meticulous low-level plumbing by hand.  The source code here is a kit with instructions for Hugo.)
+(Hugo is a program that assembles a finished website from a kit we give it.  It's easier for us to make a kit with instructions rather than do all the meticulous low-level plumbing by hand.  This source code is a kit with instructions for Hugo.)
 
 
 # First steps
