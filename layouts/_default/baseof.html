@@ -4,9 +4,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {{ partial "head/favicons.html" . }}
+
     <link rel="stylesheet" href="/css/_hamburger.css">
     <link rel="stylesheet" href="/css/main.css">
-    {{block "styles" . }} {{ end }}
+
+    {{ block "styles" . }} {{ end }}
+
     <title>{{ block "title" . }} {{ .Site.Title }} {{ end }}</title>
   </head>
 
@@ -43,8 +48,9 @@
         <a href="/contact/" role="menuitem" {{ if eq .Section "contact" }} class="underlined" {{ end }}>CONTACT</a>
       </nav>
     </header>
+
+    <!-- Main page content -->
     {{ block "main" . }}
-    <!-- The part of the page that begins to differ between templates -->
     {{ end }}
 
     <script>
