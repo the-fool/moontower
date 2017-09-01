@@ -36,6 +36,9 @@ git commit -m "I changed XYZ because of PDQ"
 git push
 ```
 
+
+You can also change code _in the GitHub website GUI_.  Totally up to you!
+
 # Do
 
 There is a swiss-army script for doing things.  Run the following commands in a shell at the root directory of the project.
@@ -47,6 +50,7 @@ This will run a server, that by default serves the app at `127.0.0.1:1313`.  Mos
 
 ## To build a final version of the site
 `./do build`
+
 This script 'builds' the final product into a bunch of files ready to ship.  You only 'build' the project when you are wanting to upload it to the actual server in the cloud.
 
 
