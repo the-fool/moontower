@@ -22,6 +22,8 @@
           {{ partial "nav_logo.html" }}
         </a>
       </div>
+
+      <!--  Mobile Navigation Menu -->
       <nav id="mobile-nav" role="navigation">
         <a href="/" role="menuitem">HOME</a>
         <a href="/ciders/" role="menuitem">CIDERS</a>
@@ -29,14 +31,16 @@
         <a href="/faq/" role="menuitem">FAQ</a>
         <a href="/contact/" role="menuitem">CONTACT</a>
       </nav>
+
+      <!--  Big Navigation Menu -->
       <nav id="big-nav" role="navigation">
-        <a href="/ciders/" role="menuitem">CIDERS</a>
-        <a href="/about/" role="menuitem">ABOUT</a>
+        <a href="/ciders/" role="menuitem" {{ if eq .Section "ciders" }} class="underlined" {{ end }}>CIDERS</a>
+        <a href="/about/" role="menuitem"  {{ if eq .Section "about" }} class="underlined" {{ end }}>ABOUT</a>
         <a href="/" role="menuitem" id="nav-logo">
           {{ partial "nav_logo.html" }}
         </a>
-        <a href="/faq/" role="menuitem">FAQ</a>
-        <a href="/contact/" role="menuitem">CONTACT</a>
+        <a href="/faq/" role="menuitem" {{ if eq .Section "faq" }} class="underlined" {{ end }}>FAQ</a>
+        <a href="/contact/" role="menuitem" {{ if eq .Section "faq" }} class="underlined" {{ end }}>CONTACT</a>
       </nav>
     </header>
     {{ block "main" . }}
