@@ -1,0 +1,53 @@
+{{ define "styles" }}
+<link rel="stylesheet" href="/css/contact.css">
+{{ end }}
+
+{{ define "main" }}
+<main aria-role="main">
+  <div class="body">
+    <header>
+      <h1>Contact Us</h1>
+    </header>
+    <div class="entry">
+      We’re always happy to hear your comments, questions or suggestions.
+    </div>
+
+    <div class="form">
+      <form action="/wat">
+        <div class="dropdown">
+          <button type="button" onclick="openDropdown()" class="dropbtn">General</button>
+          <ul id="inquiry-types" class="dropdown-content">
+            <li>Link 1</li>
+            <li>Link 2</li>
+            <li>Link 3</li>
+          </ul>
+        </div>
+        <a class="button">SUBMIT</a>
+      </form>
+    </div>
+  </div>
+</main>
+{{ end }}
+
+{{ define "scripts" }}
+<script>
+ function openDropdown() {
+   document.getElementById("inquiry-types").classList.toggle("show");
+ }
+
+ // Close the dropdown menu if the user clicks outside of it
+ window.onclick = function(event) {
+   if (!event.target.matches('.dropbtn')) {
+
+     var dropdowns = document.getElementsByClassName("dropdown-content");
+     var i;
+     for (i = 0; i < dropdowns.length; i++) {
+       var openDropdown = dropdowns[i];
+       if (openDropdown.classList.contains('show')) {
+         openDropdown.classList.remove('show');
+       }
+     }
+   }
+ }
+</script>
+{{ end }}

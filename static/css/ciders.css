@@ -1,0 +1,51 @@
+#semi-dry {
+    background-color: #73c38f;
+}
+a.button {
+  max-width: 30em;
+}
+#semi-dry a.button {
+    color: #73c38f;
+}
+
+.body {
+    color: white;
+}
+
+h1 {
+    color: white;
+    text-transform: uppercase;
+    margin: 0 0 1.75rem 0;
+    padding: 0;
+}
+
+img {
+    border-style: none;
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+section {
+    padding: 7.6% 7.6% 50px!important;
+    margin-bottom: 40px;
+}
+
+section .body p {
+    font-size: 1.2rem;
+}
+
+section .main-content {
+  flex: 2;
+  max-width: 450px;
+}
+
+section .can-content {
+  flex: 1;
+  padding: 15px 30px;
+  min-width: 180px;
+  max-width: 350px;
+}
+
+.slider {
+  margin-bottom: 70px;
+}

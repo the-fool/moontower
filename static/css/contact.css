@@ -1,0 +1,24 @@
+.body {
+    background-color: #ec7857;
+    overflow: hidden;
+    padding: 7.5781% 7.5781% 50px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+a.button {
+    color: #ec7857;
+}
+
+a.button:hover {
+    color: #fefefe;
+    background-color: #73c38f;
+}
+
+.entry {
+    max-width: 300px;
+}
+
+header {
+    text-transform: uppercase;
+}
