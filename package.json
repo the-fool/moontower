@@ -1,0 +1,13 @@
+{
+  "name": "moontower",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/the-fool/moontower.git",
+  "author": "<sketchbang@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "autoprefixer": "^7.1.4",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^7.0.0"
+  }
+}
