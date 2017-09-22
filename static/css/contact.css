@@ -22,3 +22,79 @@ a.button:hover {
 header {
     text-transform: uppercase;
 }
+
+
+
+/* The container <div> - needed to position the dropdown content */
+
+.dropdown {
+    letter-spacing: 0.1em;
+    font-family: "Gothic Bold";
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Dropdown Button */
+
+.dropbtn {
+    font-family: inherit;
+    letter-spacing: inherit;
+    font-size: 16px;
+    color: #fefefe;
+    background-color: #ec7857;
+    border: 4px solid;
+    padding: 10px 12px;
+    width: 100%;
+    cursor: pointer;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+
+/* Dropdown Content (Hidden by Default) */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fefefe;
+    width: 100%;
+    z-index: 1;
+}
+
+
+/* Links inside the dropdown */
+
+.dropdown .dropdown-content a {
+    font-size: 16px;
+    padding: 12px 0;
+    margin: 0 12px;
+    background: 0 0;
+    border: none;
+    color: #ec7857;
+    text-decoration: none;
+    display: block;
+    text-transform: uppercase;
+    border-bottom: solid 2px;
+}
+
+.dropdown .dropdown-item:hover {
+  background-color: #73c38f;
+}
+
+.dropdown .dropdown-item:hover a {
+  color: #fefefe;
+  border-bottom: 2px solid #73c38f;
+}
+
+
+
+
+
+
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+
+.show {
+    display: block;
+}
