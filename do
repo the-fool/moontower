@@ -22,7 +22,7 @@ mail_server () {
 }
 
 aws() {
-    aws s3 cp ./public s3://moontowercider.com --recursive
+    aws s3 cp ./public s3://moontowercider.com --recursive --cache-control no-cache
 }
 
 usage() {

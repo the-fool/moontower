@@ -2,6 +2,10 @@
 <link rel="stylesheet" href="/css/contact.css"> {{ end }} {{ define "main" }}
 <main aria-role="main">
   <div class="body">
+
+
+    <!--  Top matter -->
+
     <header>
       <h1>Contact Us</h1>
     </header>
@@ -9,11 +13,15 @@
       We’re always happy to hear your comments, questions or suggestions.
     </div>
 
-    <form action="/wat">
+    <form>
+
 
       <!-- Inquiry kind selector -->
+
       <div class="sm-flex justify-end items-center" style="margin-bottom: 20px">
-        <div class="label" style="margin-right: 20px">Inquiry Type</div>
+        <div class="label" style="margin-right: 20px">
+          Inquiry Type:
+        </div>
         <div class="dropdown">
           <button type="button" onclick="openDropdown()" class="dropbtn">
             <div class="flex justify-between items-center">
@@ -34,6 +42,9 @@
           </div>
         </div>
       </div>
+
+
+      <!--  The form itself -->
 
       <div id="form-content">
         <div class="sm-flex">

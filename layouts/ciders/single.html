@@ -10,12 +10,14 @@
     <!-- About us section -->
     <section id="semi-dry">
       <div class="body flex justify-between">
-        <div class="main-content">
+        <div class="main-content flex flex-column">
           <h1>Semi-dry</h1>
 
           <img class="stats" src="/images/semi_dry_stats.svg">
 
+          <div class="flex-auto">
           {{ partial "ciders/semi_dry.html" }}
+          </div>
 
           <img class="sm-hide md-hide lg-hide slider" src="/images/semi_dry_slider.svg">
 
@@ -26,7 +28,7 @@
         </div>
 
         <div class="xs-hide can-content" id="semi-dry-picture">
-          <img src="/images/semi_dry_can.png">
+          <img class="can" src="/images/semi_dry_can.png">
           <img src="/images/semi_dry_slider.svg">
         </div>
       </div>
