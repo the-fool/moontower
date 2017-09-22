@@ -7,7 +7,7 @@ import requests
 
 key = os.environ['MG_KEY']
 sandbox = 'sandboxc3791adbe2a945f5a6997005c4c6fdec.mailgun.org'
-recipient = 'sketchbang@gmail.com'
+recipient = 'benjamin@moontowercider.com'
 sender = 'postmaster@sandboxc3791adbe2a945f5a6997005c4c6fdec.mailgun.org'
 request_url = 'https://api.mailgun.net/v3/{0}/messages'.format(sandbox)
 
@@ -19,7 +19,7 @@ def send(msg):
         data={
             'from': sender,
             'to': recipient,
-            'subject': 'Hello',
+            'subject': 'MTC Mail',
             'text': str(msg)
         })
     print('Status: {0}'.format(request.status_code))
