@@ -8,6 +8,9 @@ main {
     padding: 6% 7.5781% 25px;
     margin-bottom: 40px;
     position: relative;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 p, .entry {
@@ -45,6 +48,10 @@ label {
 
 label {
   margin-bottom: 0;
+}
+
+form {
+  width: 100%;
 }
 
 #form-content input,
@@ -199,6 +206,17 @@ form {
     display: none;
 }
 
+#contact-img-sm {
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+.feedback-box {
+  padding: 15px;
+  margin-top: 50px;
+}
+.bordered {
+  border: 4px solid #fefefe;
+}
 textarea {
   resize: none;
 }
@@ -213,6 +231,9 @@ textarea {
         margin-left: auto;
     }
 
+    #contact-img-sm {
+      display: none;
+    }
     #contact-img {
       display: block;
     }
@@ -230,7 +251,7 @@ textarea {
       height: 1.1875em;
     }
 
-    .dropbtn {
+    .dropbtn, .bordered {
       border-width: 2px;
     }
 }

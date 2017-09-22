@@ -54,59 +54,70 @@
       </div>
 
       <a class="button" id="submit" onclick="submit()">SUBMIT</a>
+
+    <!--  Feedback boxes on message success/error -->
+    <div class="feedback-box bordered" id="success">
+      Thank you for your message.  It has been sent.
+    </div>
+
+    <div class="feedback-box bordered" id="error">
+      There was an error sending your message.  Please refresh the page and try again.
+    </div>
     </form>
 
+
     <img id="contact-img" src="/images/contact.svg">
+    <img id="contact-img-sm" src="/images/inline-contact-address-640.svg">
   </div>
 </main>
 {{ end }} {{ define "scripts" }}
 <script>
-  function submit() {
-  var form = new FormData(document.querySelector('form'));
-  var kind = document.querySelector('#inquiry-type').textContent;
-  form.append('inquiry', kind);
+ function submit() {
+   var form = new FormData(document.querySelector('form'));
+   var kind = document.querySelector('#inquiry-type').textContent;
+   form.append('inquiry', kind);
 
-  var payload = {};
-  for (var entry of form.entries()) {
-  payload[entry[0]] = entry[1];
-  }
+   var payload = {};
+   for (var entry of form.entries()) {
+     payload[entry[0]] = entry[1];
+   }
 
-  var req = new XMLHttpRequest();
+   var req = new XMLHttpRequest();
 
-  req.open("POST", "http://localhost:8080");
-  req.send(JSON.stringify(payload));
-  req.onreadystatechange = function() {
-  if (req.readyState === 4) {
-  if (req.status === 200) {
-  console.log('successful');
-  } else {
-  console.log('failed');
-  }
-  }
-  }
-  }
+   req.open("POST", "http://localhost:8080");
+   req.send(JSON.stringify(payload));
+   req.onreadystatechange = function() {
+     if (req.readyState === 4) {
+       if (req.status === 200) {
+         console.log('successful');
+       } else {
+         console.log('failed');
+       }
+     }
+   }
+ }
 
-  function openDropdown() {
-  document.getElementById("inquiry-types").classList.toggle("show");
-  }
+ function openDropdown() {
+   document.getElementById("inquiry-types").classList.toggle("show");
+ }
 
-  function setInquiry(opt) {
-  document.getElementById('inquiry-type').textContent = opt;
-  }
+ function setInquiry(opt) {
+   document.getElementById('inquiry-type').textContent = opt;
+ }
 
-  // Close the dropdown menu if the user clicks outside of it
-  window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn') && !event.target.matches('.dropbtn *')) {
+ // Close the dropdown menu if the user clicks outside of it
+ window.onclick = function(event) {
+   if (!event.target.matches('.dropbtn') && !event.target.matches('.dropbtn *')) {
 
-  var dropdowns = document.getElementsByClassName("dropdown-content");
-  var i;
-  for (i = 0; i < dropdowns.length; i++) {
-  var openDropdown = dropdowns[i];
-  if (openDropdown.classList.contains('show')) {
-  openDropdown.classList.remove('show');
-  }
-  }
-  }
-  }
+     var dropdowns = document.getElementsByClassName("dropdown-content");
+     var i;
+     for (i = 0; i < dropdowns.length; i++) {
+       var openDropdown = dropdowns[i];
+       if (openDropdown.classList.contains('show')) {
+         openDropdown.classList.remove('show');
+       }
+     }
+   }
+ }
 </script>
 {{ end }}
