@@ -1,10 +1,10 @@
 .flex{ display:-webkit-box; display:-webkit-flex; display:-ms-flexbox; display:flex }
 
-@media (min-width: 40em){
+@media (min-width: 640px){
   .sm-flex{ display:-webkit-box; display:-webkit-flex; display:-ms-flexbox; display:flex }
 }
 
-@media (min-width: 52em){
+@media (min-width: 840px){
   .md-flex{ display:-webkit-box; display:-webkit-flex; display:-ms-flexbox; display:flex }
 }
 

@@ -12,7 +12,7 @@
     <form action="/wat">
 
       <!-- Inquiry kind selector -->
-      <div class="md-flex justify-end items-center">
+      <div class="sm-flex justify-end items-center" style="margin-bottom: 20px">
         <div class="label" style="margin-right: 20px">Inquiry Type</div>
         <div class="dropdown">
           <button type="button" onclick="openDropdown()" class="dropbtn">
@@ -36,16 +36,18 @@
       </div>
 
       <div id="form-content">
-        <div id="name">
-          <label>Name:</label>
-          <input id="name-form" type="text" name="name">
-        </div>
+        <div class="sm-flex">
+          <div class="flex-auto form-control" id="name">
+            <label>Name:</label>
+            <input id="name-form" type="text" name="name">
+          </div>
 
-        <div id="email">
-          <label>Email:</label>
-          <input id="email-form" type="text" name="email">
+          <div class="flex-auto form-control sm-no-left" id="email">
+            <label>Email:</label>
+            <input id="email-form" type="text" name="email">
+          </div>
         </div>
-        <div id="message">
+        <div class="form-control sm-no-top" id="message">
           <label>Message:</label>
           <textarea rows="7" id="message-form" type="text" name="message"></textarea>
         </div>
@@ -59,52 +61,52 @@
 </main>
 {{ end }} {{ define "scripts" }}
 <script>
- function submit() {
-   var form = new FormData(document.querySelector('form'));
-   var kind = document.querySelector('#inquiry-type').textContent;
-   form.append('inquiry', kind);
+  function submit() {
+  var form = new FormData(document.querySelector('form'));
+  var kind = document.querySelector('#inquiry-type').textContent;
+  form.append('inquiry', kind);
 
-   var payload = {};
-   for (var entry of form.entries()) {
-     payload[entry[0]] = entry[1];
-   }
+  var payload = {};
+  for (var entry of form.entries()) {
+  payload[entry[0]] = entry[1];
+  }
 
-   var req = new XMLHttpRequest();
+  var req = new XMLHttpRequest();
 
-   req.open("POST", "http://localhost:8080");
-   req.send(JSON.stringify(payload));
-   req.onreadystatechange = function() {
-     if (req.readyState === 4) {
-       if (req.status === 200) {
-         console.log('successful');
-       } else {
-         console.log('failed');
-       }
-     }
-   }
- }
+  req.open("POST", "http://localhost:8080");
+  req.send(JSON.stringify(payload));
+  req.onreadystatechange = function() {
+  if (req.readyState === 4) {
+  if (req.status === 200) {
+  console.log('successful');
+  } else {
+  console.log('failed');
+  }
+  }
+  }
+  }
 
- function openDropdown() {
-   document.getElementById("inquiry-types").classList.toggle("show");
- }
+  function openDropdown() {
+  document.getElementById("inquiry-types").classList.toggle("show");
+  }
 
- function setInquiry(opt) {
-   document.getElementById('inquiry-type').textContent = opt;
- }
+  function setInquiry(opt) {
+  document.getElementById('inquiry-type').textContent = opt;
+  }
 
- // Close the dropdown menu if the user clicks outside of it
- window.onclick = function(event) {
-   if (!event.target.matches('.dropbtn') && !event.target.matches('.dropbtn *')) {
+  // Close the dropdown menu if the user clicks outside of it
+  window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn') && !event.target.matches('.dropbtn *')) {
 
-     var dropdowns = document.getElementsByClassName("dropdown-content");
-     var i;
-     for (i = 0; i < dropdowns.length; i++) {
-       var openDropdown = dropdowns[i];
-       if (openDropdown.classList.contains('show')) {
-         openDropdown.classList.remove('show');
-       }
-     }
-   }
- }
+  var dropdowns = document.getElementsByClassName("dropdown-content");
+  var i;
+  for (i = 0; i < dropdowns.length; i++) {
+  var openDropdown = dropdowns[i];
+  if (openDropdown.classList.contains('show')) {
+  openDropdown.classList.remove('show');
+  }
+  }
+  }
+  }
 </script>
 {{ end }}
