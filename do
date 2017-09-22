@@ -10,6 +10,7 @@ serve() {
 
 build() {
     hugo
+    ./node_modules/gulp/bin/gulp.js build
 }
 
 usage() {
