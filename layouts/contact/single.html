@@ -14,6 +14,9 @@
 
     <div class="form">
       <form action="/wat">
+
+        <!-- Inquiry kind selector -->
+        <div class="label">Inquiry Type</div>
         <div class="dropdown">
           <button type="button" onclick="openDropdown()" class="dropbtn">
             <div class="flex justify-between align-center">
@@ -33,6 +36,23 @@
             </div>
           </div>
         </div>
+
+        <div id="form-content">
+          <div id="name">
+            <label>Name:</label>
+            <input id="name-form" type="text" name="name">
+          </div>
+
+          <div id="email">
+            <label>Email:</label>
+            <input id="email-form" type="text" name="email">
+          </div>
+          <div id="message">
+            <label>Message:</label>
+            <textarea rows="7" id="message-form" type="text" name="message"></textarea>
+          </div>
+        </div>
+
         <a class="button">SUBMIT</a>
       </form>
     </div>
