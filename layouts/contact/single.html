@@ -1,8 +1,5 @@
 {{ define "styles" }}
-<link rel="stylesheet" href="/css/contact.css">
-{{ end }}
-
-{{ define "main" }}
+<link rel="stylesheet" href="/css/contact.css"> {{ end }} {{ define "main" }}
 <main aria-role="main">
   <div class="body">
     <header>
@@ -12,11 +9,10 @@
       We’re always happy to hear your comments, questions or suggestions.
     </div>
 
-    <div class="form">
-      <form action="/wat">
+    <form action="/wat">
 
-        <!-- Inquiry kind selector -->
-        <div class="md-flex justify-end items-center">
+      <!-- Inquiry kind selector -->
+      <div class="md-flex justify-end items-center">
         <div class="label" style="margin-right: 20px">Inquiry Type</div>
         <div class="dropdown">
           <button type="button" onclick="openDropdown()" class="dropbtn">
@@ -37,33 +33,57 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <div id="form-content">
+        <div id="name">
+          <label>Name:</label>
+          <input id="name-form" type="text" name="name">
         </div>
 
-        <div id="form-content">
-          <div id="name">
-            <label>Name:</label>
-            <input id="name-form" type="text" name="name">
-          </div>
-
-          <div id="email">
-            <label>Email:</label>
-            <input id="email-form" type="text" name="email">
-          </div>
-          <div id="message">
-            <label>Message:</label>
-            <textarea rows="7" id="message-form" type="text" name="message"></textarea>
-          </div>
+        <div id="email">
+          <label>Email:</label>
+          <input id="email-form" type="text" name="email">
         </div>
+        <div id="message">
+          <label>Message:</label>
+          <textarea rows="7" id="message-form" type="text" name="message"></textarea>
+        </div>
+      </div>
 
-        <a class="button" id="submit">SUBMIT</a>
-      </form>
-    </div>
+      <a class="button" id="submit" onclick="submit()">SUBMIT</a>
+    </form>
+
+    <img id="contact-img" src="/images/contact.svg">
   </div>
 </main>
-{{ end }}
-
-{{ define "scripts" }}
+{{ end }} {{ define "scripts" }}
 <script>
+ function submit() {
+   var form = new FormData(document.querySelector('form'));
+   var kind = document.querySelector('#inquiry-type').textContent;
+   form.append('inquiry', kind);
+
+   var payload = {};
+   for (var entry of form.entries()) {
+     payload[entry[0]] = entry[1];
+   }
+
+   var req = new XMLHttpRequest();
+
+   req.open("POST", "http://localhost:8080");
+   req.send(JSON.stringify(payload));
+   req.onreadystatechange = function() {
+     if (req.readyState === 4) {
+       if (req.status === 200) {
+         console.log('successful');
+       } else {
+         console.log('failed');
+       }
+     }
+   }
+ }
+
  function openDropdown() {
    document.getElementById("inquiry-types").classList.toggle("show");
  }
@@ -74,7 +94,6 @@
 
  // Close the dropdown menu if the user clicks outside of it
  window.onclick = function(event) {
-   console.log(event.target);
    if (!event.target.matches('.dropbtn') && !event.target.matches('.dropbtn *')) {
 
      var dropdowns = document.getElementsByClassName("dropdown-content");
@@ -87,6 +106,5 @@
      }
    }
  }
-
 </script>
 {{ end }}
