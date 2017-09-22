@@ -55,14 +55,14 @@
 
       <a class="button" id="submit" onclick="submit()">SUBMIT</a>
 
-    <!--  Feedback boxes on message success/error -->
-    <div class="feedback-box bordered" id="success">
-      Thank you for your message.  It has been sent.
-    </div>
+      <!--  Feedback boxes on message success/error -->
+      <div class="feedback-box bordered" id="success">
+        Thank you for your message.  It has been sent.
+      </div>
 
-    <div class="feedback-box bordered" id="error">
-      There was an error sending your message.  Please refresh the page and try again.
-    </div>
+      <div class="feedback-box bordered" id="error">
+        There was an error sending your message.  Please refresh the page and try again.
+      </div>
     </form>
 
 
@@ -83,18 +83,31 @@
    }
 
    var req = new XMLHttpRequest();
-
-   req.open("POST", "http://localhost:8080");
+   var url = "http://ec2-18-220-11-90.us-east-2.compute.amazonaws.com:8080";
+   req.open("POST", url);
    req.send(JSON.stringify(payload));
    req.onreadystatechange = function() {
      if (req.readyState === 4) {
        if (req.status === 200) {
+         success();
          console.log('successful');
        } else {
+         error();
          console.log('failed');
        }
      }
    }
+ }
+
+ function success() {
+   var box = document.getElementById('success');
+   box.classList.add('shown');
+ }
+
+
+ function error() {
+   var box = document.getElementById('error');
+   box.classList.add('shown');
  }
 
  function openDropdown() {
