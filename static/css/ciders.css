@@ -1,9 +1,11 @@
 #semi-dry {
     background-color: #73c38f;
 }
+
 a.button {
-  max-width: 30em;
+    max-width: 30em;
 }
+
 #semi-dry a.button {
     color: #73c38f;
 }
@@ -35,17 +37,29 @@ section .body p {
 }
 
 section .main-content {
-  flex: 2;
-  max-width: 450px;
+    flex: 2;
+    max-width: 450px;
 }
 
 section .can-content {
-  flex: 1;
-  padding: 15px 30px;
-  min-width: 180px;
-  max-width: 350px;
+    flex: 1;
+    padding: 15px 30px;
+    min-width: 180px;
+    max-width: 350px;
 }
 
 .slider {
-  margin-bottom: 70px;
+    margin-bottom: 70px;
+}
+
+@media (min-width: 640px) {
+    #find-us {
+        max-width: 20em;
+    }
+}
+
+@media (min-width: 840px) {
+    .stats {
+        max-width: 350px;
+    }
 }
