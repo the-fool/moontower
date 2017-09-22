@@ -12,6 +12,7 @@ build() {
     hugo
     ./node_modules/gulp/bin/gulp.js build
 }
+
 aws() {
     aws s3 cp ./public s3://moontowercider.com --recursive
 }
