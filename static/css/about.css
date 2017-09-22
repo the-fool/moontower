@@ -1,148 +1,157 @@
 article {
-  color: white;
-  line-height: 1.25;
-  margin: 0 0 24px;
+    color: white;
+    line-height: 1.25;
+    margin: 0 0 24px;
 }
 
 article header {
-  font-family: "Gothic Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  letter-spacing: .12em;
-  line-height: 2.6em;
-  font-size: 2em;
-  text-transform: uppercase;
+    font-family: "Gothic Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    letter-spacing: .12em;
+    line-height: 2.6em;
+    font-size: 2em;
+    text-transform: uppercase;
 }
 
 section {
-  padding: 2% 8%;
-  margin-bottom: 24px;
+    padding: 2% 8%;
 }
 
 section .body {
-  display: flex;
-  flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 
 section .body .col {
-  flex: 1;
+    flex: 1;
 }
 
 #tower-picture {
-  margin-left: 3em;
-  text-align: right;
+    margin-left: 3em;
+    text-align: right;
 }
 
 #tower-picture img {
-  width: 100%;
-  max-width: 450px;
+    width: 100%;
+    max-width: 450px;
 }
 
 p {
-  max-width: 90%;
-  font-size: 1em;
+    max-width: 90%;
+    font-size: 1.2rem;
+    line-height: 1.25;
 }
 
 #about-us {
-  background-color: #ee5956;
+    background-color: #ee5956;
 }
 
 #about-cider {
-  background-color: #73c38f;
-  padding-left: 0!important;
+    background-color: #73c38f;
+    padding-left: 0!important;
 }
 
 #about-cider-text {
-  margin-left: 8%;
+    margin-left: 8%;
 }
 
 .history {
-  display: none;
-  flex: 0;
-  padding-top: 30px;
+    display: none;
+    flex: 0;
+    padding-top: 30px;
 }
 
 blockquote {
-  display: flex;
-  align-items: center;
-  border: 1px solid;
-  margin: 1em -1em;
-  width: 80%;
-  max-width: 450px;
-  font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    border: 1px solid;
+    margin: 1em -1em;
+    width: 80%;
+    max-width: 450px;
+    font-family: sans-serif;
 }
 
 blockquote::before {
-  font-size: 5em;
-  padding: 10px 20px 0;
-  text-align: center;
-  max-width: 10%;
-  flex: 1;
-  content: '\201C';
+    font-size: 5em;
+    padding: 10px 20px 0;
+    text-align: center;
+    max-width: 10%;
+    flex: 1;
+    content: '\201C';
 }
 
 blockquote .quote-inner {
-  border-left: 1px solid;
-  font-size: 14px;
-  flex: 1;
-  padding: 1em;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+    border-left: 1px solid;
+    font-size: 14px;
+    flex: 1;
+    padding: 1em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .fact-box {
-  display: none;
-  color: #ee5956;
+    color: #ee5956;
 }
 
 .fact-box .box {
-  border: 2px solid;
-  padding: 1em;
-  font-family: sans-serif;
+    border: 2px solid;
+    padding: 1em;
+    font-family: sans-serif;
 }
 
 .fact-box .box .box-heading {
-  text-transform: uppercase;
-  font-size: 10px;
-  letter-spacing: 3px;
-  font-weight: 300;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 3px;
+    font-weight: 300;
 }
 
 .fact-box .box .box-body {
-  text-transform: uppercase;
-  font-weight: bolder;
-  letter-spacing: 3px;
-  font-size: 17px;
-  margin-top: 2px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    font-size: 17px;
+    margin-top: 2px;
 }
 
 .fact-box .box:not(:first-child) {
-  border-left: 0px;
+    border-left: 0px;
 }
-
-@media screen and (min-width: 640px) {
-  .fact-box {
-    display: flex;
+@media (min-width: 640px) {
+  .blockquote {
+    width: 69.36%;
+    margin: 21px -3.5%;
   }
 }
 
 @media screen and (min-width: 910px) {
-  #history-justified {
-    display: block;
-    flex: 1;
-  }
+    #history-justified {
+        display: block;
+        flex: 1;
+    }
+    
+    #about-cider-text {
+        margin-left: 4%;
+    }
 
-  #about-cider-text {
-    margin-left: 4%;
-  }
+    .blockquote {
+        width: 110.5%;
+        margin-left: -16.15%
+    }
 }
 
 @media screen and (min-width: 1130px) {
-  #history-justified {
-    display: none;
-    flex: 0;
-  }
+    .blockquote {
+        width: 87.74%;
+        margin-left: -12.25%;
+    }
 
-  #history-staggered {
-    display: block;
-    flex: 1;
-  }
+    #history-justified {
+        display: none;
+        flex: 0;
+    }
+
+    #history-staggered {
+        display: block;
+        flex: 1;
+    }
 }

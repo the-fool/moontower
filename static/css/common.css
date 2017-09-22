@@ -79,3 +79,8 @@
 }
 
 .display-none{ display:none !important }
+
+p {
+  line-height: 1.25;
+  text-rendering: optimizeLegibility;
+}
