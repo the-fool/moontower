@@ -90,9 +90,6 @@ font-family: "Gothic Bold";
 }
 
 
-
-
-
 /* Dropdown Button */
 
 .dropbtn {
@@ -165,4 +162,22 @@ font-family: "Gothic Bold";
 
 .show {
     display: block;
+}
+
+form {
+  max-width: 800px;
+  margin: auto;
+}
+
+
+
+@media (min-width: 640px) {
+  .dropdown {
+    max-width: 17em;
+  }
+
+  #submit {
+    max-width: 10em;
+  }
+
 }

@@ -16,10 +16,11 @@
       <form action="/wat">
 
         <!-- Inquiry kind selector -->
-        <div class="label">Inquiry Type</div>
+        <div class="md-flex justify-end items-center">
+        <div class="label" style="margin-right: 20px">Inquiry Type</div>
         <div class="dropdown">
           <button type="button" onclick="openDropdown()" class="dropbtn">
-            <div class="flex justify-between align-center">
+            <div class="flex justify-between items-center">
               <span id="inquiry-type">General</span>
               <span><img src="/images/down-arrow.png" height="10px"></span>
             </div>
@@ -35,6 +36,7 @@
               <a>Jobs</a>
             </div>
           </div>
+        </div>
         </div>
 
         <div id="form-content">
@@ -53,7 +55,7 @@
           </div>
         </div>
 
-        <a class="button">SUBMIT</a>
+        <a class="button" id="submit">SUBMIT</a>
       </form>
     </div>
   </div>
