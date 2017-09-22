@@ -43,7 +43,7 @@ section .main-content {
 
 section .can-content {
     flex: 1;
-    padding: 15px 30px;
+    padding: 0px 30px;
     min-width: 180px;
     max-width: 350px;
 }

@@ -100,14 +100,20 @@
  }
 
  function success() {
-   var box = document.getElementById('success');
-   box.classList.add('shown');
+   clean('success');
  }
 
 
  function error() {
-   var box = document.getElementById('error');
+   clean('error');
+ }
+
+ function clean(boxName) {
+   var box = document.getElementById(boxName);
    box.classList.add('shown');
+   document
+     .querySelectorAll('input, textarea')
+     .forEach(function(n) { n.value = '';});
  }
 
  function openDropdown() {
