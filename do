@@ -21,7 +21,7 @@ mail_server () {
     docker run -it -p 8080:8080 -e MG_KEY=$MG_KEY mtc_email
 }
 
-aws() {
+push_aws() {
     aws s3 cp ./public s3://moontowercider.com --recursive --cache-control no-cache
 }
 
@@ -38,7 +38,7 @@ case $cmd in
     build) build;;
     docker_build) docker_build;;
     mail_server) mail_server;;
-    aws) aws;;
+    aws) push_aws;;
     ssh) ssh;;
     help|"") usage;;
     *) wrong_command "$cmd";;
