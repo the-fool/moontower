@@ -7,3 +7,7 @@ enableRobotsTXT = true
 [params]
     subtitle = "Wat"
     author = "Thomas Ruble"
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
