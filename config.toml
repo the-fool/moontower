@@ -5,8 +5,9 @@ title = "Moontower Cider | Crafted in East Austin Texas"
 enableRobotsTXT = true
 
 [params]
-    subtitle = "Wat"
     author = "Thomas Ruble"
+
+
 [sitemap]
   changefreq = "monthly"
   priority = 0.5

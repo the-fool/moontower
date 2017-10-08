@@ -1,1 +1,4 @@
-content
++++
+type = "about"
+title = "About"
++++
