@@ -64,7 +64,7 @@
         </div>
       </div>
 
-      <a class="button" id="submit" onclick="submit()">SUBMIT</a>
+      <a class="button" id="submit" ontouchstart="submit()" onclick="submit()">SUBMIT</a>
 
       <!--  Feedback boxes on message success/error -->
       <div class="feedback-box bordered" id="success">
@@ -83,7 +83,12 @@
 </main>
 {{ end }} {{ define "scripts" }}
 <script>
+ var engaged = false;
  function submit() {
+   if (engaged) {
+     return;
+   }
+   engaged = true;
    var kind = document.querySelector('#inquiry-type').textContent;
    var message = document.getElementById('message-form').value;
    var email = document.getElementById('email-form').value;
@@ -123,6 +128,7 @@
  }
 
  function clean(boxName) {
+   engaged = false;
    var box = document.getElementById(boxName);
    box.classList.add('shown');
    document

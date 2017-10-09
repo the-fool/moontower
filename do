@@ -18,7 +18,7 @@ docker_build () {
 }
 
 mail_server () {
-    docker run -it -p 8080:8080 -e MG_KEY=$MG_KEY mtc_email
+    docker run -it -p 8080:8080 -e MG_KEY=$MG_KEY -e FLASK_APP=/server2.py mtc_email
 }
 
 push_aws() {
@@ -29,7 +29,7 @@ usage() {
     echo './do serve'
 }
 
-ssh () {
+ssh_mail () {
     ssh -i ~/.ssh/mtc_email_server.pem ec2-user@ec2-18-220-11-90.us-east-2.compute.amazonaws.com
 }
 
@@ -39,7 +39,7 @@ case $cmd in
     docker_build) docker_build;;
     mail_server) mail_server;;
     aws) push_aws;;
-    ssh) ssh;;
+    ssh) ssh_mail;;
     help|"") usage;;
     *) wrong_command "$cmd";;
 esac

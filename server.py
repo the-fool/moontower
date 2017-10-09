@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 from http.server import BaseHTTPRequestHandler, HTTPServer
-from http.client import parse_headers
 import json
 import os
 import requests
@@ -27,7 +26,6 @@ def send(msg):
     print('Body:   {0}'.format(request.text))
 
 
-
 class testHTTPServer_RequestHandler(BaseHTTPRequestHandler):
     def _set_headers(self):
         self.send_response(200)
@@ -37,7 +35,8 @@ class testHTTPServer_RequestHandler(BaseHTTPRequestHandler):
         sub = ''
         if 'www.moontowercider.com' in origin:
             sub = 'www.'
-        self.send_header('Access-Control-Allow-Origin', 'http://{}moontowercider.com'.format(sub))
+        self.send_header('Access-Control-Allow-Origin',
+                         'http://{}moontowercider.com'.format(sub))
 
     def do_OPTIONS(self):
         self._set_headers()
@@ -68,6 +67,7 @@ class testHTTPServer_RequestHandler(BaseHTTPRequestHandler):
             send(msg)
         except:
             print('Error sending to mailgun')
+
 
 def run():
     print('starting server...')
