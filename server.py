@@ -28,7 +28,8 @@ def send(msg):
 
 origins = [
     'http://moontowercider.com',
-    'http://www.moontowercider.com'
+    'http://www.moontowercider.com',
+    'http://localhost'
 ]
 
 
