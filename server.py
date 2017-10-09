@@ -38,18 +38,24 @@ class testHTTPServer_RequestHandler(BaseHTTPRequestHandler):
         if 'www.moontowercider.com' in origin:
             sub = 'www.'
         self.send_header('Access-Control-Allow-Origin', 'http://{}moontowercider.com'.format(sub))
+
+    def do_OPTIONS(self):
+        self._set_headers()
+        self.send_header('Allow', 'OPTIONS, POST')
         self.end_headers()
+        self.send_response(200)
 
     def do_GET(self):
         self._set_headers()
+        self.end_headers()
         self.send_response(404)
-
 
     def do_POST(self):
         # Send response status code
         data_string = self.rfile.read(int(self.headers['Content-Length']))
 
         self._set_headers()
+        self.end_headers()
         self.send_response(200)
         self.wfile.write(b"thanks")
 
