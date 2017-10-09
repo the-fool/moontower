@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 from http.server import BaseHTTPRequestHandler, HTTPServer
+from http.client import parse_headers
 import json
 import os
 import requests
@@ -26,20 +27,23 @@ def send(msg):
     print('Body:   {0}'.format(request.text))
 
 
-origins = [
-    'http://moontowercider.com',
-    'http://www.moontowercider.com',
-    'http://localhost'
-]
-
 
 class testHTTPServer_RequestHandler(BaseHTTPRequestHandler):
     def _set_headers(self):
         self.send_response(200)
         self.send_header('Content-type', 'text/html')
-        for o in origins:
-            self.send_header("Access-Control-Allow-Origin", o)
+
+        origin = self.headers['Origin']
+        sub = ''
+        if 'www.moontowercider.com' in origin:
+            sub = 'www.'
+        self.send_header('Access-Control-Allow-Origin', 'http://{}moontowercider.com'.format(sub))
         self.end_headers()
+
+    def do_GET(self):
+        self._set_headers()
+        self.send_response(404)
+
 
     def do_POST(self):
         # Send response status code
@@ -51,10 +55,13 @@ class testHTTPServer_RequestHandler(BaseHTTPRequestHandler):
 
         try:
             msg = json.loads(str(data_string.decode('utf-8')))
+        except:
+            print('Error parsing message: {}'.format(data_string))
+
+        try:
             send(msg)
         except:
-            pass
-
+            print('Error sending to mailgun')
 
 def run():
     print('starting server...')
