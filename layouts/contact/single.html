@@ -64,7 +64,7 @@
         </div>
       </div>
 
-      <a class="button" id="submit" ontouchstart="submit()" onclick="submit()">SUBMIT</a>
+      <a class="button" id="submit">SUBMIT</a>
 
       <!--  Feedback boxes on message success/error -->
       <div class="feedback-box bordered" id="success">
@@ -83,6 +83,11 @@
 </main>
 {{ end }} {{ define "scripts" }}
 <script>
+ document.addEventListener("DOMContentLoaded", function(event) {
+   var button = document.getElementById('submit');
+   button.addEventListener('click', submit);
+   button.addEventListener('touchstart', submit);
+ });
  var engaged = false;
  function submit() {
    if (engaged) {
