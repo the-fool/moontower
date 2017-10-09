@@ -26,11 +26,18 @@ def send(msg):
     print('Body:   {0}'.format(request.text))
 
 
+origins = [
+    'http://moontowercider.com',
+    'http://www.moontowercider.com'
+]
+
+
 class testHTTPServer_RequestHandler(BaseHTTPRequestHandler):
     def _set_headers(self):
         self.send_response(200)
         self.send_header('Content-type', 'text/html')
-        self.send_header("Access-Control-Allow-Origin", "*")
+        for o in origins:
+            self.send_header("Access-Control-Allow-Origin", o)
         self.end_headers()
 
     def do_POST(self):
@@ -41,8 +48,11 @@ class testHTTPServer_RequestHandler(BaseHTTPRequestHandler):
         self.send_response(200)
         self.wfile.write(b"thanks")
 
-        msg = json.loads(str(data_string.decode('utf-8')))
-        send(msg)
+        try:
+            msg = json.loads(str(data_string.decode('utf-8')))
+            send(msg)
+        except:
+            pass
 
 
 def run():
