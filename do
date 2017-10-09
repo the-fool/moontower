@@ -18,7 +18,7 @@ docker_build () {
 }
 
 mail_server () {
-    docker run -it -p 8080:8080 -e MG_KEY=$MG_KEY -e FLASK_APP=/server2.py mtc_email
+    docker run -it -p 8080:8080 -e MG_KEY=$MG_KEY mtc_email
 }
 
 push_aws() {
