@@ -31,7 +31,7 @@ class testHTTPServer_RequestHandler(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header('Content-type', 'text/html')
 
-        origin = self.headers['Origin']
+        origin = self.headers.get('Origin', '')
         sub = ''
         if 'www.moontowercider.com' in origin:
             sub = 'www.'
