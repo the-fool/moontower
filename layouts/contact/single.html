@@ -84,14 +84,17 @@
 {{ end }} {{ define "scripts" }}
 <script>
  function submit() {
-   var form = new FormData(document.querySelector('form'));
    var kind = document.querySelector('#inquiry-type').textContent;
-   form.append('inquiry', kind);
+   var message = document.getElementById('message-form').value;
+   var email = document.getElementById('email-form').value;
+   var name = document.getElementById('name-form').value
 
-   var payload = {};
-   for (var entry of form.entries()) {
-     payload[entry[0]] = entry[1];
-   }
+   var payload = {
+     kind: kind,
+     message: message,
+     email: email,
+     name: name
+   };
 
    var req = new XMLHttpRequest();
    var url = "http://ec2-18-220-11-90.us-east-2.compute.amazonaws.com:8080";
