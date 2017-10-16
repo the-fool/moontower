@@ -9,6 +9,7 @@
     <meta name="googlebot" content="index,follow,snippet,archive">
     <meta name="keywords" content="cider,austin,texas,cidery,brewery">
 
+    {{ block "description" . }} {{ end }}
     <meta property="og:image" content="http://moontowercider.com/images/social_homepage_image.jpg" />
 
     {{ partial "head/favicons.html" . }}
