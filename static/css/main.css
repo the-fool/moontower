@@ -42,6 +42,7 @@ body {
 
 body {
   width: 90%;
+  max-width: 1200px;
   margin: auto;
   background: #eaece7;
   font-family: adobe-garamond-pro, Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;

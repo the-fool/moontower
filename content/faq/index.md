@@ -1,1 +1,4 @@
++++
+type="faq"
++++
 content

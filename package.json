@@ -12,5 +12,8 @@
     "gulp-htmlmin": "^3.0.0",
     "gulp-postcss": "^7.0.0",
     "htmlmin": "^0.0.7"
+  },
+  "devDependencies": {
+    "gulp-util": "^3.0.8"
   }
 }
