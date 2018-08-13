@@ -12,6 +12,10 @@
   src: url("/fonts/gothic_bold.woff2") format('woff2');
 }
 
+:root {
+  --pomme-blush: #eb5956;
+}
+
 html {
   width: 100%;
 }

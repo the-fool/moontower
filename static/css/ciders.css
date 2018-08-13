@@ -10,6 +10,22 @@ a.button {
     color: #73c38f;
 }
 
+#pomme-blush {
+  background-color: #eb5956;
+}
+
+#pomme-blush a.button {
+  color: #eb5956;
+}
+
+#pomme-blush .body {
+  flex-direction: row-reverse;
+}
+
+#pomme-blush .can-content {
+  margin-right: 20px;
+}
+
 .body {
     color: white;
     max-height: 100%;
@@ -63,7 +79,7 @@ section .can-content {
 }
 
 @media (min-width: 640px) {
-    #semi-dry {
+    section {
         height: 400px;
     }
 
