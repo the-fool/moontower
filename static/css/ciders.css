@@ -6,24 +6,16 @@ a.button {
     max-width: 30em;
 }
 
-#semi-dry a.button {
-    color: #73c38f;
-}
-
 #pomme-blush {
-  background-color: #eb5956;
-}
-
-#pomme-blush a.button {
-  color: #eb5956;
+    background-color: #eb5956;
 }
 
 #pomme-blush .body {
-  flex-direction: row-reverse;
+    flex-direction: row-reverse;
 }
 
 #pomme-blush .can-content {
-  margin-right: 20px;
+    margin-right: 20px;
 }
 
 #miel {
@@ -40,7 +32,7 @@ img {
 }
 
 img.can {
-  object-fit: scale-down;
+    object-fit: scale-down;
 }
 
 h1 {
@@ -57,7 +49,7 @@ img {
 }
 
 section {
-    padding: 7.6% 7.6% 50px!important;
+    padding: 7.6% 7.6% 50px !important;
     margin-bottom: 40px;
 }
 
@@ -87,7 +79,7 @@ section .can-content {
         height: 400px;
     }
 
-    #find-us {
+    a.button {
         max-width: 20em;
     }
 }
