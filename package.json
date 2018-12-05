@@ -15,5 +15,9 @@
   },
   "devDependencies": {
     "gulp-util": "^3.0.8"
+  },
+  "scripts": {
+    "build": "gulp build"
   }
+
 }
