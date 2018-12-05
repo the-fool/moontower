@@ -26,6 +26,10 @@ a.button {
   margin-right: 20px;
 }
 
+#miel {
+    background-color: #e87856;
+}
+
 .body {
     color: white;
     max-height: 100%;
