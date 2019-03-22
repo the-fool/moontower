@@ -201,6 +201,16 @@ nav a,
   background-color: #c8cdc0;
 }
 
+.button.perry, 
+.button.gold {
+  color: var(--gold);
+}
+
+.button.perry:hover,
+.button.gold:hover {
+  background-color: var(--miel);
+}
+
 .button.miel {
   color: var(--miel);
 }
