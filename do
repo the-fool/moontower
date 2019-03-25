@@ -22,7 +22,7 @@ mail_server () {
 }
 
 push_aws() {
-    aws s3 cp ./public s3://moontowercider.com --recursive --cache-control no-cache
+    aws s3 cp ./public s3://moontowercider.com --recursive --cache-control no-cache --profile moontower
 }
 
 usage() {
