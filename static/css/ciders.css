@@ -9,8 +9,12 @@ a.button {
 #pomme-blush {
     background-color: #eb5956;
 }
+#perry {
+    background-color: var(--gold);
+}
 
-#pomme-blush .body {
+#pomme-blush .body,
+#perry .body {
     flex-direction: row-reverse;
 }
 
