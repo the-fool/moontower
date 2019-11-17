@@ -20,4 +20,4 @@ gulp.task('minify', function() {
     .pipe(gulp.dest('./public'));
 });
 
-gulp.task('build', ['css', 'minify']);
+gulp.task('build', gulp.series('css', 'minify'));
