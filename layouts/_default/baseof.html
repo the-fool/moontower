@@ -47,6 +47,8 @@
       <!--  Mobile Navigation Menu -->
       <nav id="mobile-nav" role="navigation">
         <a href="/" role="menuitem">HOME</a>
+        <a href="/tasting" role="menuitem">TASTING ROOM</a>
+        <a href="/events" role="menuitem">EVENTS</a>
         <a href="/ciders/" role="menuitem">CIDERS</a>
         <a href="/about/" role="menuitem">ABOUT</a>
         <a href="/faq/" role="menuitem">FAQ</a>
@@ -55,13 +57,15 @@
 
       <!--  Big Navigation Menu -->
       <nav id="big-nav" role="navigation">
-        <a href="/ciders/" role="menuitem" {{ if eq .Section "ciders" }} class="underlined" {{ end }}>CIDERS</a>
-        <a href="/about/" role="menuitem"  {{ if eq .Section "about" }} class="underlined" {{ end }}>ABOUT</a>
-        <a href="/" role="menuitem" id="nav-logo">
+        <a href="/tasting" {{ if eq .Type "tasting" }} class="underlined" {{ end }} role="menuitem">TASTING ROOM</a>
+        <a href="/events" {{ if eq .Type "events" }} class="underlined" {{ end }} role="menuitem">EVENTS</a>
+        <a href="/ciders/" role="menuitem" {{ if eq .Type "ciders" }} class="underlined" {{ end }}>CIDERS</a>
+        <a href="/tasting" role="menuitem" id="nav-logo">
           {{ partial "svgs/nav_logo.svg" }}
         </a>
-        <a href="/faq/" role="menuitem" {{ if eq .Section "faq" }} class="underlined" {{ end }}>FAQ</a>
-        <a href="/contact/" role="menuitem" {{ if eq .Section "contact" }} class="underlined" {{ end }}>CONTACT</a>
+        <a href="/about/" role="menuitem"  {{ if eq .Type "about" }} class="underlined" {{ end }}>ABOUT</a>
+        <a href="/faq/" role="menuitem" {{ if eq .Type "faq" }} class="underlined" {{ end }}>FAQ</a>
+        <a href="/contact/" role="menuitem" {{ if eq .Type "contact" }} class="underlined" {{ end }}>CONTACT</a>
       </nav>
     </header>
 

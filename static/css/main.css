@@ -139,12 +139,12 @@ nav a,
 }
 
 #big-nav a[role="menuitem"] {
-  line-height: 2.3;
+  line-height: 1;
   border-bottom: 2px solid transparent;
   transition: border-bottom .3s;
   font-size: 1rem;
   color: #10454b;
-  margin: 0.8em;
+  margin: 1.5em;
 }
 
 #big-nav a.underlined,
