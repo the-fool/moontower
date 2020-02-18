@@ -13,6 +13,11 @@
   src: url("/fonts/gothic_bold.woff2") format('woff2');
 }
 
+@font-face {
+  font-family: "Adobe Garamond Pro";
+  src: url("/fonts/adobe_garamond_pro.woff") format('woff');
+}
+
 :root {
   --pomme-blush: #eb5956;
   --miel: #e87857;
@@ -59,7 +64,7 @@ body {
   max-width: 1200px;
   margin: auto;
   background: #eaece7;
-  font-family: adobe-garamond-pro, Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+  font-family: "Adobe Garamond Pro", Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
   font-weight: 400;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
