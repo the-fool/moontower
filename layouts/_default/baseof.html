@@ -57,10 +57,10 @@
 
       <!--  Big Navigation Menu -->
       <nav id="big-nav" role="navigation">
-        <a href="/tasting" {{ if eq .Type "tasting" }} class="underlined" {{ end }} role="menuitem">TASTING ROOM</a>
-        <a href="/events" {{ if eq .Type "events" }} class="underlined" {{ end }} role="menuitem">EVENTS</a>
+        <a href="/tasting/" {{ if eq .Type "tasting" }} class="underlined" {{ end }} role="menuitem">TASTING ROOM</a>
+        <a href="/events/" {{ if eq .Type "events" }} class="underlined" {{ end }} role="menuitem">EVENTS</a>
         <a href="/ciders/" role="menuitem" {{ if eq .Type "ciders" }} class="underlined" {{ end }}>CIDERS</a>
-        <a href="/tasting" role="menuitem" id="nav-logo">
+        <a href="/tasting/" role="menuitem" id="nav-logo">
           {{ partial "svgs/nav_logo.svg" }}
         </a>
         <a href="/about/" role="menuitem"  {{ if eq .Type "about" }} class="underlined" {{ end }}>ABOUT</a>

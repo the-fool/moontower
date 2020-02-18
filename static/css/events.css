@@ -1,0 +1,8 @@
+#calendar {
+    text-align: center;
+}
+
+iframe {
+    min-height: 600px;
+    width: 100%;
+}
