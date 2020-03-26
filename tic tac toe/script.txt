@@ -1,0 +1,32 @@
+function myFunction(_input) {
+    var txt;
+    var y = prompt("Please enter \"X\" or \"O\":");
+
+    someArray[_input-1] = y;
+
+
+    if ((someArray[0]==someArray[1] && someArray[1]==someArray[2]) ||
+        (someArray[3]==someArray[4] && someArray[4]==someArray[5]) ||
+        (someArray[6]==someArray[7] && someArray[7]==someArray[8]) ||
+        (someArray[0]==someArray[3] && someArray[3]==someArray[5]) ||
+        (someArray[1]==someArray[4] && someArray[4]==someArray[7]) ||
+        (someArray[2]==someArray[5] && someArray[5]==someArray[8]) ||
+        (someArray[0]==someArray[4] && someArray[4]==someArray[8]) ||
+        (someArray[6]==someArray[4] && someArray[4]==someArray[2])
+        ) {
+        return document.getElementById("demo").innerHTML = "Player " + y + " wins!" ;
+    }
+    else if (y == "X" || y == "x") {
+      txt = "X";
+    }
+    else if (y == "O" || y == "o") {
+        txt = "O";
+      }
+    else {
+        txt = "try again, dummy";
+        return ;
+    }
+    
+
+    return document.getElementById(_input).innerHTML = txt;
+  }
