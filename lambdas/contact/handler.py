@@ -25,7 +25,7 @@ def lambda_handler(event, context):
     mg_key = os.environ['MG_KEY']
 
     sandbox = 'sandboxc3791adbe2a945f5a6997005c4c6fdec.mailgun.org'
-    recipient = 'benjamin@moontowercider.com'
+    recipient = 'benjamin@moontowercider.com, justin@moontowercider.com'
     sender = 'postmaster@sandboxc3791adbe2a945f5a6997005c4c6fdec.mailgun.org'
     request_url = 'https://api.mailgun.net/v3/{0}/messages'.format(sandbox)
 
