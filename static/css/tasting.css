@@ -18,6 +18,7 @@ section {
 
 section .body {
     display: flex;
+    font-family: "Gothic Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     flex-direction: row;
 }
 
